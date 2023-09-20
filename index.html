@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+
+    <link rel="icon" href="img/ON - ORANGE.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- CSS Native -->
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar shadow p-2 mb-5">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/ON - ORANGE.png" alt="" width="40 " height="34" class="d-inline-block align-text-top">
+                    MSIB X Hacktiv8
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container mb-5">
+        <h1 class="text-center">Assignment 2 : KANBAN</h1>
+    </section>
+
+    <section class="container hal">
+        <div class="input-group mb-3">
+            <input  class="form-control" type="text" name="item" id="item" spellcheck="false" placeholder="Masukkan Task">
+            <button onclick="createClick()" class="btn btn-success"><i class="bi bi-list-task"> </i> Create</button>
+        </div>
+
+        <div class="kanban row">
+            <div class="col-sm-4">
+                <div class="card shadow-lg">
+                    <div id="input" class="card-body" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h5 class="card-title">To Do</h5>
+                        <div id="${taskId}" class="border rounded-top px-2 mt-2" draggable="true" ondragstart="drag(event)">
+                            <div class="mb-3">
+                                <span class="fs-4">Membaca</span>
+                            </div>
+                            <div class="d-flex flex-row-reverse">
+                                <button onclick="enterTask('${taskId}')" class="btn btn-success"><i
+                                        class="bi bi-check-circle"> </i> Enter</button>
+                                <button onclick="editTask('${taskId}')" class="btn btn-primary mx-2"><i
+                                        class="bi bi-pencil-fill"> </i> Edit</button>
+                                <button onclick="deleteTask('${taskId}')" class="btn btn-danger"> <i
+                                        class="bi bi-x-square"> </i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow-lg">
+                    <div id="progress" class="card-body" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h5 class="card-title">On Progress</h5>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="card shadow-lg">
+                    <div id="complete" class="card-body" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <h5 class="card-title">Complete</h5>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <p class="fst-italic">M Rafhi Said Hafiz</p>
+    </footer>
+
+    <!-- Javascript Native -->
+    <script src="src/script.js"></script>
+    <script src="src/drag.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

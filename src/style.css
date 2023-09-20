@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(239, 164, 110);
+}
+
+.navbar {
+    background-color: #d13c28;
+}
+
+.navbar-brand {
+    color: aliceblue;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: azure;
+    font-weight: bold;
+}
+
+h1 {
+    color: rgb(52, 47, 40);
+}
+
+.hal {
+    background-color: rgb(245, 199, 167);
+    padding: 5vh;
+    border-radius: 5px;
+}
+
+#progress {
+    border: 2px solid blue;
+    border-radius: 5px;
+}
+
+#complete {
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.input-group {
+    width: 32%;
+}
+
+.card {
+    min-height: 40vh;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 50%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .input-group {
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        margin-top: 20px;
+    }
+  }
